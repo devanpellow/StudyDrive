@@ -11,20 +11,20 @@ export class Calculator extends Component {
 				</div>
 				<button
 					className="width-double"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					name="clear"
 				>
 					AC
 				</button>
 				<button
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					name="delete"
 				>
 					DEL
 				</button>
 				<button
 					className="operator"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="&divide;"
 					name="/"
 				>
@@ -32,7 +32,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="7"
 					name="7"
 				>
@@ -40,7 +40,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="8"
 					name="8"
 				>
@@ -48,7 +48,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="9"
 					name="9"
 				>
@@ -56,15 +56,15 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="operator"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="*"
-					name="x"
+					name="*"
 				>
 					&times;
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="4"
 					name="4"
 				>
@@ -72,7 +72,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="5"
 					name="5"
 				>
@@ -80,7 +80,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="6"
 					name="6"
 				>
@@ -88,7 +88,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="operator"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="-"
 					name="-"
 				>
@@ -96,7 +96,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="1"
 					name="1"
 				>
@@ -104,7 +104,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="2"
 					name="2"
 				>
@@ -112,7 +112,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="3"
 					name="3"
 				>
@@ -120,7 +120,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="operator"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="+"
 					name="+"
 				>
@@ -128,7 +128,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="width-double number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="0"
 					name="0"
 				>
@@ -136,7 +136,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="number"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="."
 					name="."
 				>
@@ -144,7 +144,7 @@ export class Calculator extends Component {
 				</button>
 				<button
 					className="operator"
-					onClick={e => this.props.onClick(e.target.name)}
+					onClick={e => this.props.handleClick(e.target.name)}
 					value="="
 					name="="
 				>

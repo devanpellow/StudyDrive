@@ -24,6 +24,7 @@
 
 #number-fact{
   width: 30vw;
+  padding-top: 4rem;
 }
 
 #number-fact h3{
@@ -43,6 +44,8 @@
   align-items: flex-end;
   flex-direction: column;
   justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 #calc-top {
@@ -100,5 +103,6 @@ button.operator:hover{
   }
   #number-fact{
     padding-bottom: 2rem;
+    padding-top: 0rem;
   }
 }

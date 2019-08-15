@@ -13,7 +13,7 @@ class App extends Component {
 		fact: ""
 	};
 
-	onClick = button => {
+	handleClick = button => {
 		if (button === "=") {
 			this.calculate();
 		} else if (button === "clear") {
@@ -54,7 +54,7 @@ class App extends Component {
 				<h1>Studydrive Calculator</h1>
 				<div id="content-wrapper">
 					<Calculator
-						onClick={this.onClick}
+						handleClick={this.handleClick}
 						display={this.state.display}
 						result={this.state.result}
 					/>
