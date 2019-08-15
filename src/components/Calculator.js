@@ -1,94 +1,155 @@
 import React, { Component } from "react";
 
 export class Calculator extends Component {
-	state = {
-		input: ''
-	};
-
-	handleClick = button => {
-    const { name } = button.target;
-		if (button === "=") {
-			this.calulate();
-		} else if (button === "clear") {
-			this.setState({
-        title: ''
-			})
-		} else {
-      console.log(name)
-      this.setState({
-       input: this.state.input += button.target.name 
-      })
-    }
-	};
 
 	render() {
 		return (
-			<div>
-				<input value={this.state.input}></input>
-				<div className="keypad">
-					<button onClick={this.handleClick} name="">
-						C
-					</button>
-					<button onClick={this.handleClick} value='(' name="(">
-						(
-					</button>
-					<button onClick={this.handleClick} value=')' name=")">
-						)
-					</button>
-					<button onClick={this.handleClick} value='/' name='&divide;'>
-						&divide;
-					</button>
-					<br />
-					<button onClick={this.handleClick} value="9" name="9">
-						9
-					</button>
-					<button onClick={this.handleClick} value="8" name="8">
-						8
-					</button>
-					<button onClick={this.handleClick} value="7" name="7">
-						7
-					</button>
-					<button onClick={this.handleClick} value="*" name="x">
-						&times;
-					</button>
-					<br />
-					<button onClick={this.handleClick} value="6" name="6">
-						6
-					</button>
-					<button onClick={this.handleClick} value="5" name="5">
-						5
-					</button>
-					<button onClick={this.handleClick} value="4" name="4">
-						4
-					</button>
-					<button onClick={this.handleClick} value="-" name="-">
-						-
-					</button>
-					<br />
-					<button onClick={this.handleClick} value="3" name="3">
-						3
-					</button>
-					<button onClick={this.handleClick} value="2" name="2">
-						2
-					</button>
-					<button onClick={this.handleClick} value="1" name="1">
-						1
-					</button>
-					<button onClick={this.handleClick} value="+" name="+">
-						+
-					</button>
-					<br />
-					<button onClick={this.handleClick} value="." name=".">
-						.
-					</button>
-					<button onClick={this.handleClick} value="0" name="0">
-						0
-					</button>
-					<button onClick={this.handleClick} value="=" name="=">
-						=
-					</button>
-					<br />
+			<div id="keypad" className="calculator">
+				<div className="result">
+					<p id="calc-top">{this.props.display}</p>
+					<p id="calc-bottom">{this.props.result}</p>
 				</div>
+				<button
+					className="width-double"
+					onClick={e => this.props.onClick(e.target.name)}
+					name="clear"
+				>
+					AC
+				</button>
+				<button
+					onClick={e => this.props.onClick(e.target.name)}
+					name="delete"
+				>
+					DEL
+				</button>
+				<button
+					className="operator"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="&divide;"
+					name="/"
+				>
+					&divide;
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="7"
+					name="7"
+				>
+					7
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="8"
+					name="8"
+				>
+					8
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="9"
+					name="9"
+				>
+					9
+				</button>
+				<button
+					className="operator"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="*"
+					name="x"
+				>
+					&times;
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="4"
+					name="4"
+				>
+					4
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="5"
+					name="5"
+				>
+					5
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="6"
+					name="6"
+				>
+					6
+				</button>
+				<button
+					className="operator"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="-"
+					name="-"
+				>
+					-
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="1"
+					name="1"
+				>
+					1
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="2"
+					name="2"
+				>
+					2
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="3"
+					name="3"
+				>
+					3
+				</button>
+				<button
+					className="operator"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="+"
+					name="+"
+				>
+					+
+				</button>
+				<button
+					className="width-double number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="0"
+					name="0"
+				>
+					0
+				</button>
+				<button
+					className="number"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="."
+					name="."
+				>
+					.
+				</button>
+				<button
+					className="operator"
+					onClick={e => this.props.onClick(e.target.name)}
+					value="="
+					name="="
+				>
+					=
+				</button>
 			</div>
 		);
 	}
